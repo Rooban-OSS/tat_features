@@ -3,69 +3,54 @@ import streamlit as st
 # Page Config
 st.set_page_config(page_title="AI Hiring Platform Roadmap", layout="wide")
 
-# Custom CSS for Styling
-st.markdown("""
+# Theme Toggle
+if "theme" not in st.session_state:
+    st.session_state.theme = "light"
+
+def toggle_theme():
+    st.session_state.theme = "dark" if st.session_state.theme == "light" else "light"
+
+st.sidebar.button("🌗 Toggle Light/Dark Mode", on_click=toggle_theme)
+
+# Custom CSS for Theme Switching
+theme_css = """
     <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #1E1E2E;
-            color: #F8F9FA;
-        }
-        .title {
-            font-size: 36px;
-            font-weight: bold;
-            text-align: center;
-            padding: 10px 0;
-            color: #FFD700;
-        }
-        .subtitle {
-            font-size: 22px;
-            text-align: center;
-            font-weight: 500;
-            color: #BBB;
-            margin-bottom: 15px;
-        }
-        .highlight-box {
-            background: #27293D;
-            padding: 15px;
-            border-radius: 12px;
-            margin-bottom: 15px;
-            box-shadow: 2px 2px 15px rgba(255, 215, 0, 0.2);
-        }
-        .section-title {
-            font-size: 26px;
-            font-weight: bold;
-            margin: 10px 0;
-            color: #FFD700;
-        }
-        .feature-list {
-            font-size: 18px;
-            padding: 5px;
-            margin-left: 15px;
-            color: #F8F9FA;
-        }
-        .divider {
-            border-top: 2px solid #FFD700;
-            margin: 20px 0;
-        }
+        body { font-family: 'Arial', sans-serif; }
+        .title { font-size: 36px; font-weight: bold; text-align: center; padding: 10px 0; }
+        .subtitle { font-size: 22px; text-align: center; font-weight: 500; margin-bottom: 15px; }
+        .highlight-box { padding: 15px; border-radius: 12px; margin-bottom: 15px; box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.2); }
+        .section-title { font-size: 26px; font-weight: bold; margin: 10px 0; }
+        .feature-list { font-size: 18px; padding: 5px; margin-left: 15px; }
+        .divider { border-top: 2px solid #FFD700; margin: 20px 0; }
     </style>
-""", unsafe_allow_html=True)
+"""
+light_mode = """
+    <style>
+        body { background-color: #F8F9FA; color: #000; }
+        .highlight-box { background: #FFF; color: #000; }
+    </style>
+"""
+dark_mode = """
+    <style>
+        body { background-color: #1E1E2E; color: #F8F9FA; }
+        .highlight-box { background: #27293D; color: #F8F9FA; }
+    </style>
+"""
+
+st.markdown(theme_css, unsafe_allow_html=True)
+st.markdown(dark_mode if st.session_state.theme == "dark" else light_mode, unsafe_allow_html=True)
 
 # Title & Introduction
 st.markdown("<div class='title'>🚀 AI Hiring Platform Roadmap</div>", unsafe_allow_html=True)
 st.markdown("<div class='subtitle'>From AI-based Hiring to Predictive Analytics – Explore Our Evolution</div>", unsafe_allow_html=True)
 
-# Featured Highlights (Key Points at the Top)
+# Featured Highlights
 st.markdown("### 🌟 **Key Highlights**")
-
 col1, col2, col3 = st.columns(3)
-
 with col1:
     st.markdown("<div class='highlight-box'><b>✅ AI-Powered Hiring</b><br>AI Agents, Resume Matchmaking, Video Interviews</div>", unsafe_allow_html=True)
-
 with col2:
     st.markdown("<div class='highlight-box'><b>✅ Next-Gen Assessments</b><br>Coding Challenges, MCQs, Proctoring & Voice Agents</div>", unsafe_allow_html=True)
-
 with col3:
     st.markdown("<div class='highlight-box'><b>✅ Job Intelligence</b><br>Job Aggregator, Career Roadmap, AI Chatbot</div>", unsafe_allow_html=True)
 
@@ -73,6 +58,15 @@ st.markdown("<div class='divider'></div>", unsafe_allow_html=True)
 
 # Roadmap Data
 phases = {
+    "🚀 Phase 1 (Now - Feb)": [
+        "**Resume Builder AI** - Smart CV generator",
+        "**Resume Analyzer AI** - Skill gap analysis",
+        "**Job Description Generator AI**",
+        "**MatchMaker AI** - JD vs Resume Matching",
+        "**Coding Assessment IDE** - Python, C, C++ problems",
+        "**Applicant Tracking System (ATS)**",
+        "**Proctoring Features:** Face Detection, Object Detection, Multi-person Detection, Eye Tracking, Tab Switch Detection, Fullscreen Monitoring"
+    ],
     "🚀 Phase 2 (Feb - April)": [
         "**Round 1:** AI & Custom MCQs (Critical Thinking, Logic, Psychometrics)",
         "**Round 2:** MERN Stack Coding Assessments",
