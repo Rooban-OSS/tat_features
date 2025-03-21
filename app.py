@@ -84,6 +84,7 @@ phases = {
         "Reports Download - multi format - Tech discovery ",
         "Coding Mock Test environment: Practise background, skill and coding interviews - Tech discovery",
         "Pre-Screened Talent Pool: Access a vetted database of candidates who’ve completed skill assessments & video interviews. Skip initial screening rounds and fast-track to final interviews or offers. - In progress "
+        "Plagiarism checker"
     ],
     "⚡ Phase 4 (July - Sept)": [
         "Game-Based Hiring Assessments for Fun & Insightful Hiring",
