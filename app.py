@@ -59,10 +59,10 @@ phases = {
         "Round 1: AI & Custom MCQs (Critical Thinking, Logic, Psychometrics)",
         "Round 2: MERN Stack Coding Assessments",
         "Round 3: AI-Human Video Interviews + Speech-to-Text",
-        "Proctoring Option - custom for new rounds"
+        "Proctoring Option - custom for new rounds",
         "Job Intelligence: FAANG, Big 7 Job Aggregator, Career Path Guide",
         "Jobs trending dashboard - job based approach",
-        "Job Route Map - user can select a role to see how to reach the spot - check roadmap.ch"
+        "Job Route Map - user can select a role to see how to reach the spot - check roadmap.ch",
         "Proctoring System: Custom AI Proctoring for Assessments",
         "Resume Matchmaker AI & GDPR/SOC Compliance",
         "One-Click Interview Invites & Multi-Format Report Downloads",
@@ -75,7 +75,7 @@ phases = {
         "Round 3: AI Video Interview Bot",
         "Online Hackathon Platform - Fully Automated Hackathons",
         "AI Voice Agents - Candidate Screening & Scheduling - In progress ",
-        "ATS - adding more features - Tech discovery"
+        "ATS - adding more features - Tech discovery",
         "Online Hackathon Platform - Fully Online Hackathon and Ideathon Platform",
         "User Social Profiling - Personality Types, social media handles, coding handles, auto resume update and download etc",
         "Ai Agents build/conversion (resume builder, matchmaker, etc) - Tech discovery",
@@ -83,8 +83,7 @@ phases = {
         "Online Chatbot - interact with Dashboard - L2 - Tech discovery ",
         "Reports Download - multi format - Tech discovery ",
         "Coding Mock Test environment: Practise background, skill and coding interviews - Tech discovery",
-        "Pre-Screened Talent Pool: Access a vetted database of candidates who’ve completed skill assessments & video interviews. Skip initial screening rounds and fast-track to final interviews or offers. - In progress"
-
+        "Pre-Screened Talent Pool: Access a vetted database of candidates who've completed skill assessments & video interviews. Skip initial screening rounds and fast-track to final interviews or offers. - In progress",
         "Plagiarism checker"
     ],
     "⚡ Phase 4 (July - Sept)": [
@@ -93,7 +92,7 @@ phases = {
         "Candidate Personalisation - Level 1",
         "Voice Agents to conduct intial candidate screening, scheduling, conducting",
         "Ai Agents build/conversion (resume builder, matchmaker, etc)",
-        "Seamless ATS Integration: Integrate with popular ATS systems to streamline the end-to-end hiring process."
+        "Seamless ATS Integration: Integrate with popular ATS systems to streamline the end-to-end hiring process.",
         "Predictive Analytics - AI to Forecast Candidate Success",
         "Mobile Optimization - Enhanced UX for Mobile Assessments",
         "Full PostgreSQL & Next.js Migration for Scalability"
